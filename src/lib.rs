@@ -23,7 +23,7 @@ impl Font {
 
     #[cfg(not(target_os = "redox"))]
     pub fn find(typeface: Option<&str>, family: Option<&str>, style: Option<&str>) -> Result<Font, String> {
-        Font::from_path(&format!("/export/SourceSansPro-BoldIt.ttf", family.unwrap_or("Free"), typeface.unwrap_or("Mono"), style.unwrap_or("")))
+        Font::from_path(&format!("/export/SourceSansPro-BoldIt.ttf"))
     }
 
     /// Load a font from file path
