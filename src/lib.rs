@@ -57,7 +57,7 @@ impl Font {
         // Find the most visually pleasing width to display
         let width = glyphs.iter().rev()
             .filter_map(|g| g.pixel_bounding_box()
-                        .map(|b| b.min.x as f32 + g.unpositioned().h_metrics().advance_width))
+                        .map(|b| b.min.x as f32 + g.h_metrics().advance_width))
             .next().unwrap_or(0.0);
 
         Text {
